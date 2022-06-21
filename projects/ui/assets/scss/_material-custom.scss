@@ -1,0 +1,201 @@
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/theming';
+@include mat-core();
+
+$mat-color-primary: #{bit-color(primary, base)};
+$mat-color-secondary: #{bit-color(secondary, base)};
+$mat-color-danger: #{bit-color(danger, base)};
+
+// color
+$mat-primary-colors: (
+    
+    tint : get-color-tint($color-primary),
+    base : $mat-color-primary,
+    shade : get-color-shade($color-primary),
+    contrast: (
+        tint : #000000,
+        base : #ffffff,
+        shade : #ffffff,
+    )
+);
+
+$mat-secondary-colors: (
+    tint : get-color-tint($color-secondary),
+    base : $mat-color-secondary,
+    shade : get-color-shade($color-secondary),
+    contrast: (
+        tint : #000000,
+        base : #ffffff,
+        shade : #ffffff,
+    )
+);
+
+$mat-danger-colors: (
+    tint : get-color-tint($color-danger),
+    base : $mat-color-danger,
+    shade : get-color-shade($color-danger),
+    contrast: (
+        tint : #000000,
+        base : #ffffff,
+        shade : #ffffff,
+    )
+);
+
+// Material custom color ...
+$mat-palette-primary: mat-palette($mat-primary-colors, base, tint, shade );
+$mat-palette-secondary: mat-palette($mat-secondary-colors, base, tint, shade );
+$mat-palette-warn: mat-palette($mat-danger-colors, base, tint, shade );
+
+$mat-light-theme: mat-light-theme($mat-palette-primary, $mat-palette-secondary, $mat-palette-warn);
+
+@include angular-material-theme($mat-light-theme);
+
+
+//--------------- Inputs Outline Regular ---------------//
+.mat-form-field {
+    width: 100% !important;
+    height: 42px;
+    margin-bottom: 16px;
+    font-weight: 300;
+    font-family: $font-secondary !important;
+    font-size: 13px;
+    line-height: 1.8;
+  
+    .mat-error {
+      margin-top: 54px;
+      font-size: 10px;
+    }
+    button {
+      box-shadow: none !important;
+      padding: 0px;
+      margin: 0px !important;
+      width: 22px !important;
+      height: 22px !important;
+      top: -14px;
+      z-index: 2;
+      &:hover {
+        box-shadow: none !important;
+      }
+    }
+  }
+  
+  .mat-form-field-appearance-outline {
+    .mat-form-field-flex {
+      height: 42px !important;
+    }
+    .mat-form-field-wrapper {
+      height: 0px;
+      margin: 4px !important;
+      padding: 0px;
+    }
+    .mat-form-field-wrapper .mat-icon {
+      position: relative;
+      top: -13px;
+      color: #666;
+    }
+    .mat-form-field-label-wrapper {
+      top: -24px;
+      font-size: 16px;
+      overflow: inherit;
+    }
+    .mat-form-field-label {
+      color: #999;
+      padding-top: 0px;
+      top: 28px;
+    }
+    .mat-form-field-hide-placeholder .mat-form-field-label {
+      margin-top: -6px;
+      font-weight: lighter;
+    }
+    .mat-form-field-infix {
+      width: auto !important;
+      height: 0px;
+      padding: 16px 0 0 0 !important;
+      z-index: 2;
+    }
+    .mat-form-field-infix input {
+      position: relative;
+      top: -16px;
+      caret-color: $color-black-alt-80;
+    }
+    .mat-form-field-outline {
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+      border-radius: 4px;
+      background: #fff;
+    }
+
+    // disabled
+    &.mat-form-field-disabled {
+      .mat-form-field-outline {
+        background-color: #f8f8f8;
+      }
+      
+    }
+    
+    .mat-form-field-outline-start,
+    .mat-form-field-outline-gap,
+    .mat-form-field-outline-end {
+      border-width: 1px !important;
+    }
+    .mat-hint {
+      margin-top: 12px;
+      font-size: 11px;
+      color: #aaa;
+    }
+  }
+  
+  .mat-form-field-appearance-outline.mat-form-field-should-float .mat-form-field-label,
+  .mat-form-field-appearance-outline.mat-form-field.mat-focused .mat-form-field-label {
+    color: #666;
+  }
+  
+  .mat-form-field-appearance-outline.mat-form-field-should-float .mat-form-field-label {
+    top: 38px !important;
+  }
+  
+  .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    color: #777 !important;
+  }
+
+  .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #999 !important;
+  }
+  
+
+//--------------- Selects ---------------//
+
+.select-margin-top {
+  margin-top: 30px !important; 
+}
+
+.mat-select {
+  font-family: $font-secondary;
+}
+
+.mat-form-field {
+  .mat-select-trigger {
+    top: -15px;
+    .mat-select-arrow {
+      margin: 12px 4px 0 4px;
+    }
+  }
+  &.small {
+    .mat-select-arrow {
+      margin: 6px 4px 0 4px;
+    }
+    .mat-select-trigger {
+      top: -19px;
+      font-size: 14px;
+    }
+  }
+}
+
+.filter-option > .mat-pseudo-checkbox {
+  display: none !important;
+}
+
+button {
+  span {
+    line-height: 32px;
+  }
+}

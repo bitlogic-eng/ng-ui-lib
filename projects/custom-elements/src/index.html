@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CustomElements</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <bit-elements id='bitSelect' label="select" ></bit-elements>
+
+  <script>
+    const element = document.getElementById('bitSelect');
+
+    element.label = 'select';
+    element.isMultiple= true;
+    element.options = [
+      {id:1, value: 'PRE HOME'},
+      {id:2, value: 'PRE HOME RIO IV'},
+      {id:3, value: 'PRE .'},
+      {id:4, value: 'PRESENCIAL . RIO IV'},
+      {id:5, value: 'DISTANCIA - ED HOME'},
+      {id:6, value: 'DISTANCIA - EDUCACION DISTRIBUIDA'}
+    ] 
+
+
+  </script>
+</body>
+</html>
