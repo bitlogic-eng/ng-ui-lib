@@ -8,7 +8,36 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <bit-elements id='bitSelect' label="select" ></bit-elements>
+  <section>
+    <bit-toolbar></bit-toolbar>
+    <bit-select id='bitSelect' label="select" ></bit-select>  
+  </section>
+
+  <!-- <bit-form-field appearance="outline">
+    <bit-label>Input</bit-label>
+    <input matInput>
+    </bit-form-field> -->
+  <section>
+    <bit-button mat-button color="primary">Hola</bit-button>
+  </section>
+  
+  <section>
+    <bit-label>Welcome</bit-label>
+  </section>
+    
+  <section>
+    <bit-checkbox>check</bit-checkbox>
+  </section>
+  
+    
+  <section>
+    <bit-radio-group aria-label="Select an option"></bit-radio-group>
+      <bit-radio-button id="o1" value="1" labelPosition="before">Option 1</bit-radio-button>
+      <bit-radio-button id="o2" value="2">Option 2</bit-radio-button>  
+    </bit-radio-group>
+  </section>
+    
+
 
   <script>
     const element = document.getElementById('bitSelect');
@@ -22,7 +51,10 @@
       {id:4, value: 'PRESENCIAL . RIO IV'},
       {id:5, value: 'DISTANCIA - ED HOME'},
       {id:6, value: 'DISTANCIA - EDUCACION DISTRIBUIDA'}
-    ] 
+    ];
+
+    const op1 = document.getElementById('o1');
+    op1.addEventListener('change', (event) => {console.log(event)})
 
 
   </script>

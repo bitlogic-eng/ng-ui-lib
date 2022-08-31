@@ -23,7 +23,12 @@
       "dom"
     ],
     "paths": {
-      "ui": ["dist/ui"]
+      "ui": [
+        "dist/ui"
+      ],
+      "ui-lib": [
+        "dist/ui-lib"
+      ]
     }
   },
   "angularCompilerOptions": {

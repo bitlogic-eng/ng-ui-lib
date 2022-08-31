@@ -1,0 +1,97 @@
+  @import '../../../../assets/scss/theme';
+ 
+  // Toobar
+  // -------------------------------------
+
+  :host {
+
+    /**
+    * @prop --color: font text color
+    * @prop --background-lg-start: linear-gradient start
+    * @prop --background-lg-end: linear-gradient end
+    */
+
+    --color: #{$color-white};
+    --background-lg-start: #{bit-color(secondary, base)};
+    --background-lg-end: #{bit-color(primary, base)};
+
+    .loading {
+      &.toolbar {
+        background: gainsboro;
+      }  
+    }
+
+    .spacer {
+      flex: 1;
+    }
+  
+    .toolbar {
+  
+      display: flex;
+      align-items: start;
+      padding: 20px 0 0 0;
+  
+      @include deg-main (-45deg, var(--background-lg-start), var(--background-lg-end));
+      color: $color-white;
+
+      width: 100%;
+  
+      .header-user-data {
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px;
+  
+        h1 {
+          color: var(--color); 
+        }
+
+  
+        p {
+          margin: 0;
+          font-size: 0.7rem;
+          color: var(--color); 
+        }
+      }
+  
+      .header-profile {
+        display: flex;
+        align-items: center;
+        margin: 0 20px 0 0;
+  
+        .user-data {
+          margin: 0 10px 0 0;
+          text-align: end;
+  
+          h5 {
+            margin: 0 0 5px 0;
+            color: var(--color);
+          }
+  
+          p {
+            font-size: .7rem;
+            margin: 0 0 5px 0;
+            color: var(--color);
+          }
+        }
+  
+        .user-avatar {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 2px solid #{bit-color(primary, base)};
+          cursor: pointer;
+        }
+  
+        .version {
+          margin-right: 0;
+          font-weight: 300;
+          font-size: 12px;
+        }
+          
+      }
+  
+    
+    }    
+  }
+  
+

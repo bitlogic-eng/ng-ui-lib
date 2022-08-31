@@ -1,0 +1,24 @@
+<div class="toolbar" [style.height]="_height" *ngIf="isLoading === false; else loading">
+    <div class="header-user-data">
+        <h1>{{title}}</h1>
+        <p *ngIf="_type === 'big'">{{currentDate | date:'mediumDate'}}</p>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="header-profile">
+
+        <div *ngIf="_type !== 'big'" class="user-data">
+            <h5>{{userName}}</h5>
+            <p>{{currentDate | date:'mediumDate'}}</p>
+        </div>
+        <img class="user-avatar" src={{avatar}} alt="" (click)="onOpenProfile()">
+    </div>
+
+
+</div>
+
+<ng-template #loading>
+    <div class="skeleton" [style.height]="_height"></div>
+</ng-template>
+

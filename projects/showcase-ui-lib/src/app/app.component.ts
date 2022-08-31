@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SelectOption } from 'ui';
+import { SelectOption } from 'ui-lib';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +7,10 @@ import { SelectOption } from 'ui';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'test-lib';
-  
-  selectLabel = 'select';
-  isMultiple= false;
+  title = 'showcase-ui-lib';
+
+  selectLabel = 'SEL';
+  isMultiple= true;
   selectOptions: SelectOption[] = [
     {id:1, value: 'PRESENCIAL HOME'},
     {id:2, value: 'PRESENCIAL HOME RIO IV'},
@@ -20,8 +20,10 @@ export class AppComponent {
     {id:6, value: 'DISTANCIA - EDUCACION DISTRIBUIDA'},
   ] 
 
+  autoCompleteOptions: [] = [];
 
   onSelectChange($event: any) {
-
+    console.log($event)
   }
+
 }

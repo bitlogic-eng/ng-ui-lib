@@ -1,0 +1,137 @@
+
+@import '../../../../assets/scss/theme';
+
+// TODO extract to another component. (bit-skeleton)
+.skeleton-menu-text {
+  width: 60px;
+  height: 0.7rem;
+  border-radius: 0.15rem;
+}
+
+.skeleton-img {
+  width: 34px;
+  height: 34px;
+  margin: 26px 0 26px 0;
+  align-self: center;
+  border-radius: 0.15rem;
+}
+
+:host {
+
+  /**
+    * @prop --background: background of the menu
+    * @prop --background-icon-color: clicked background color 
+    * @prop --color: text color
+    */
+
+  --background: #{$color-white};
+  --background-icon-color: #{bit-color(primary, base)};
+  --color: #{bit-color(primary, base)};
+
+  .navbar {
+    height: 100%;
+    background: var(--background);
+    box-shadow: 3px 0 6px rgba(0,0,0,.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    // TODO
+    // position: fixed;
+    
+    min-width: 85px;
+  
+    .logo {
+      width: 34px;
+      height: 34px;
+      margin: 26px 0 26px 0;
+      align-self: center;
+    }
+  
+    .menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+      height: 80%;
+  
+      .item {
+        @extend %transition;
+        overflow: hidden;
+    
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+    
+        i {
+          height: 50px;
+          width: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          border: 6px solid $color-white;
+          background-color: $color-white;
+          align-items: center;
+          justify-content: center;
+          color:$color-black-alt-40;
+          font-size: 26px;
+        }
+        h6 {
+          color:$color-black-alt-40;
+          font-weight: normal;
+        }
+    
+        &.selected {
+          i {
+              color: $color-white;
+              background-color: var(--background-icon-color);
+          }
+          h6 {
+              color: var(--color);
+          }
+        }
+    
+  
+      }
+  
+    }
+  
+    .version {
+      height: auto;
+    }
+  
+  }
+  
+  @media  only screen and ( max-width : 768px) {
+  
+    .logo {
+      display: none;  
+    }
+
+    .skeleton-img {
+      display: none;
+    }
+  
+    .navbar {
+      
+      // position: relative;
+      width: 100%;
+
+      .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        align-items: flex-start;
+        height: auto;
+      }
+    }
+  }
+  
+}

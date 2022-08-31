@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp');
+
+// @import 'bootstrap-custom';
+
+@import 'mixin';
+@import 'default-colors';
+@import 'functions-color';
+
+@import 'fonts';
+@import 'variables';
+@import 'typography';
+
+@import 'material-custom';
+
+// default color
+@include bit-colors-generate(primary, $color-primary );
+@include bit-colors-generate(secondary, $color-secondary);
+@include bit-colors-generate(tertiary, $color-tertiary);
+@include bit-colors-generate(danger, $color-danger);
+@include bit-colors-generate(success, $color-success);
+@include bit-colors-generate(warning, $color-warning);
+
+
+:root {
+    --bit-button-radius: 50px;
+    }
+      
+
+    
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css"
+

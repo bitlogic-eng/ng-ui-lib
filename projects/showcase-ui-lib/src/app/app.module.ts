@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
-
-import {UiModule, SelectModule} from 'ui';
+import { SelectModule, SearchModule } from 'ui-lib';
 
 @NgModule({
   declarations: [
@@ -14,9 +14,10 @@ import {UiModule, SelectModule} from 'ui';
   ],
   imports: [
     BrowserModule,
-    UiModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
-    SelectModule
+    SelectModule,
+    SearchModule
   ],
   providers: [],
   bootstrap: [AppComponent]
