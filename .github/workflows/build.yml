@@ -1,8 +1,5 @@
 name: Secuencial jobs
-on:
-  pull_request:
-    types:
-      - closed
+on: push
 jobs:
   release:
     name: publish
