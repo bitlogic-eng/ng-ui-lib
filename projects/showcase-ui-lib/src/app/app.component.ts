@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SelectOption } from '@bitlogic-eng/ng-ui-kit';
+import { SelectOption } from '@bitlogic-eng/ng-ui-lib';
 
 @Component({
   selector: 'app-root',

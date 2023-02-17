@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { SelectModule, SearchModule } from '@bitlogic-eng/ng-ui-kit';
+import { SelectModule, SearchModule } from '@bitlogic-eng/ng-ui-lib';
 
 @NgModule({
   declarations: [AppComponent],
