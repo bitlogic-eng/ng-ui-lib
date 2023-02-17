@@ -14,7 +14,8 @@
     "watch": "ng build --watch --configuration development",
     "watch:lib": "ng build ui-lib --watch --configuration development",
     "watch:lib:prod": "ng build ui-lib --watch --configuration production",
-    "test": "ng test"
+    "test": "ng test",
+    "publish": "npm pack ./dist/ng-ui-lib && npm publish ./dist/ng-ui-lib"
   },
   "private": true,
   "dependencies": {
