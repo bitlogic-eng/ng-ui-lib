@@ -30,7 +30,6 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
-    "@bitlogic-eng/ng-ui-lib": "^0.1.0",
     "fuse.js": "^6.6.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
