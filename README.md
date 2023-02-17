@@ -8,6 +8,11 @@ This library is a work in progress. Please check out our list of
 
 - Usubiaga, Juan <juan.usubiaga@bitlogic.io>
 
+**Enviroment**
+
+- Angular: 14
+- Node: 16.14.0
+
 ## Table of Contents
 
 - [Getting started](#getting-started)
@@ -26,9 +31,6 @@ If you'd like to contribute, you must follow our [contributing guidelines](CONTR
 If you want to see the components working, try it with a live [demo - TBD].
 
 ## How to use the library
-
-Before start using this library, make sure to have configured your NPM client to use the NPM private registry. Follow this [documentation]()
-NPM private registry [Nexus](https://nexus.uesiglo21.edu.ar/#browse/browse:npm-private:%40bitlogic)
 
 To install this library, run:
 
