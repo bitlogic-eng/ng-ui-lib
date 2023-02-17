@@ -1,57 +1,55 @@
-@use '@angular/material' as mat;
-
-@include mat.core();
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/theming';
+@include mat-core();
 
 $mat-color-primary: #{bit-color(primary, base)};
 $mat-color-secondary: #{bit-color(secondary, base)};
 $mat-color-danger: #{bit-color(danger, base)};
 
-$primary-palette: (
-  100:get-color-tint($color-primary),
-  500: $mat-color-primary,
-  700: get-color-shade($color-primary),
-  contrast: (
-    100: rgba(black, 0.87),
-    500: white,
-    700: white,
-  ) 
+// color
+$mat-primary-colors: (
+    
+    tint : get-color-tint($color-primary),
+    base : $mat-color-primary,
+    shade : get-color-shade($color-primary),
+    contrast: (
+        tint : #000000,
+        base : #ffffff,
+        shade : #ffffff,
+    )
 );
 
-$secondary-palette: (
-  100:$mat-color-secondary,
-  500: $mat-color-secondary,
-  700: $mat-color-secondary,
-  contrast: (
-    100: rgba(black, 0.87),
-    500: white,
-    700: white,
-  ) 
+$mat-secondary-colors: (
+    tint : get-color-tint($color-secondary),
+    base : $mat-color-secondary,
+    shade : get-color-shade($color-secondary),
+    contrast: (
+        tint : #000000,
+        base : #ffffff,
+        shade : #ffffff,
+    )
 );
 
-$danger-palette: (
-  100: get-color-tint($color-danger),
-  500: $mat-color-danger,
-  700: get-color-shade($color-danger),
-  contrast: (
-    100: rgba(black, 0.87),
-    500: white,
-    700: white,
-  ) 
+$mat-danger-colors: (
+    tint : get-color-tint($color-danger),
+    base : $mat-color-danger,
+    shade : get-color-shade($color-danger),
+    contrast: (
+        tint : #000000,
+        base : #ffffff,
+        shade : #ffffff,
+    )
 );
 
+// Material custom color ...
+$mat-palette-primary: mat-palette($mat-primary-colors, base, tint, shade );
+$mat-palette-secondary: mat-palette($mat-secondary-colors, base, tint, shade );
+$mat-palette-warn: mat-palette($mat-danger-colors, base, tint, shade );
 
-$my-app-primary: mat.define-palette($primary-palette);
-$my-app-accent:  mat.define-palette($secondary-palette);
-$my-app-warn:    mat.define-palette($danger-palette);
-$my-app-theme:   mat.define-light-theme((
-  color: (
-    primary: $my-app-primary,
-    accent: $my-app-accent,
-    warn: $my-app-warn,
-  )
-));
+$mat-light-theme: mat-light-theme($mat-palette-primary, $mat-palette-secondary, $mat-palette-warn);
 
-@include mat.all-component-themes($my-app-theme);
+@include angular-material-theme($mat-light-theme);
+
 
 //--------------- Inputs Outline Regular ---------------//
 .mat-form-field {
